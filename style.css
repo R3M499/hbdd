@@ -1,0 +1,88 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    transition: background-color 5s ease;
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#lightButton {
+    font-size: 2em;
+    padding: 20px 40px;
+    background-color: #FFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+#balloonContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#cupsContainer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.cup {
+    width: 100px;
+    margin: 20px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 100px;
+    height: 130px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    color: #5A4FCF;
+    opacity: 0;
+    transition: opacity 3s ease;
+    animation: blink 2s infinite alternate;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+@keyframes blink {
+    0% { text-shadow: 0 0 10px #5A4FCF; }
+    100% { text-shadow: 0 0 30px #8E7DBE; }
+}
