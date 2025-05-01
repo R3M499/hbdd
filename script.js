@@ -29,7 +29,7 @@ lightButton.onclick = function() {
 };
 
 function createBalloon() {
-    const images = ["images/balloon-purple.png", "images/balloon-green.png"];
+    const images = ["balloon-purple.png", "images/balloon-green.png"];
     const balloon = document.createElement("div");
     balloon.className = "balloon";
     balloon.style.left = Math.random() * 90 + "vw";
